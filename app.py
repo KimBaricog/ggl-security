@@ -100,4 +100,5 @@ def show_user():
     return render_template('user.html', users=users)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+
