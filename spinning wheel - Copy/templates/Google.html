@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: rgb(16, 16, 16);
+        font-family: "Google Sans", Roboto, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #e3e3e3;
+      }
+
+      .container {
+        width: 380px;
+        padding: 24px;
+      }
+
+      header img {
+        width: 120px;
+        margin-bottom: 24px;
+      }
+
+      header h1 {
+        margin: 0 0 24px;
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      /* INPUT GROUP */
+      .input-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 16px 14px;
+        font-size: 16px;
+        background: transparent;
+        border: 1px solid #5f6368;
+        border-radius: 6px;
+        color: white;
+        outline: none;
+        transition: border 0.2s ease;
+      }
+
+      .input-group input:focus {
+        border: 2px solid #8ab4f8;
+      }
+
+      .input-group label {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgb(16, 16, 16);
+        padding: 0 6px;
+        font-size: 16px;
+        color: #9aa0a6;
+        pointer-events: none;
+        transition: 0.2s ease;
+      }
+
+      /* FLOAT EFFECT */
+      .input-group input:focus + label,
+      .input-group input:valid + label {
+        top: 0;
+        font-size: 12px;
+        color: #8ab4f8;
+      }
+
+      /* BUTTONS */
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+      }
+
+      #create {
+        background: none;
+        border: none;
+        color: #8ab4f8;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      #create:hover {
+        text-decoration: underline;
+      }
+
+      #login {
+        background-color: #8ab4f8;
+        color: #062e6f;
+        border: none;
+        font-size: 14px;
+        padding: 10px 24px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      #login:hover {
+        background-color: #a8c7fa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="https://www.gstatic.com/marketing-cms/assets/images/f5/d3/a7f9db7045429cb6dc6be56bdcbe/google-logo-about.svg"
+          alt="Google logo"
+        />
+        <h1>Login</h1>
+      </header>
+
+      <main>
+        <form method="POST" action="/register">
+          <div class="input-group">
+            <input id="email" name="email" type="email" required />
+            <label for="email">Email or phone</label>
+          </div>
+
+          <div class="input-group">
+            <input id="password" name="password" type="password" required />
+            <label for="password">Password</label>
+          </div>
+
+          <div class="buttons">
+            <button type="button" id="create">Create account</button>
+            <button type="submit" id="login">Login</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
